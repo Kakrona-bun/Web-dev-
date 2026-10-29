@@ -1,0 +1,368 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Chess Club — Think. Plan. Win.</title>
+  <meta name="description" content="The university Chess Club: tournaments, workshops, tutorials and an interactive chessboard." />
+
+  <!-- Google Fonts: Cormorant Garamond (headings), Inter (body), Caveat (handwritten quote) -->
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Caveat:wght@500;600&family=Cormorant+Garamond:ital,wght@0,500;0,600;0,700;1,500&family=Inter:wght@300;400;500;600&display=swap" rel="stylesheet" />
+
+  <link rel="stylesheet" href="Chessstyle.css" />
+
+  <!-- Lucide icon set (the only JS library used) -->
+  <script src="https://unpkg.com/lucide@latest/dist/umd/lucide.min.js" defer></script>
+  <script src="Chessscript.js" defer></script>
+</head>
+<body>
+
+  <!-- ===================================================================
+       NAVBAR (shared by every tab)
+       =================================================================== -->
+  <header class="navbar" id="navbar">
+    <a href="#home" class="brand" data-tab="home" aria-label="Chess Club home">
+      <span class="brand-icon" aria-hidden="true">&#9822;</span>
+      <span class="brand-text">
+        <span class="brand-name">CHESS CLUB</span>
+        <span class="brand-tagline">Think. Plan. Win.</span>
+      </span>
+    </a>
+
+    <nav class="nav-links" id="navLinks" aria-label="Main navigation">
+      <a href="#home" class="nav-link active" data-tab="home">Home</a>
+      <a href="#events" class="nav-link" data-tab="events">Events</a>
+      <a href="#tutorials" class="nav-link" data-tab="tutorials">Tutorials</a>
+      <a href="#chessboard" class="nav-link" data-tab="chessboard">Chessboard</a>
+      <a href="#contact" class="nav-link" data-tab="contact">Contact</a>
+    </nav>
+
+    <div class="nav-actions">
+      <button class="icon-btn" id="searchToggle" aria-label="Search the site">
+        <i data-lucide="search"></i>
+      </button>
+      <button class="icon-btn hamburger" id="menuToggle" aria-label="Open menu" aria-expanded="false" aria-controls="navLinks">
+        <i data-lucide="menu"></i>
+      </button>
+    </div>
+
+    <!-- Search bar (slides down when the search icon is clicked) -->
+    <form class="search-bar" id="searchBar" role="search">
+      <i data-lucide="search" class="search-bar-icon"></i>
+      <input type="search" id="searchInput" placeholder="Search events, tutorials, contact…" aria-label="Search" />
+      <span class="search-feedback" id="searchFeedback" aria-live="polite"></span>
+    </form>
+  </header>
+
+  <main>
+    <!-- =================================================================
+         1. HOME
+         ================================================================= -->
+    <section class="tab-panel hero active" id="home" aria-label="Home">
+      <!-- SWAP IMAGE: replace the URL in style.css (.hero background) with your own hero photo -->
+      <div class="hero-bg" aria-hidden="true"></div>
+
+      <div class="hero-inner">
+        <div class="hero-content">
+          <p class="hero-pre">Welcome to the</p>
+          <h1 class="hero-title">Chess Club</h1>
+          <p class="hero-desc">
+            A community for all chess lovers — from beginners to advanced players.
+            Learn, play, and grow together.
+          </p>
+          <a href="#contact" class="btn btn-gold" data-tab="contact">
+            Join Our Club <span aria-hidden="true">&rarr;</span>
+          </a>
+        </div>
+
+        <!-- Floating tournament card (closable) -->
+        <aside class="float-card" id="tournamentCard" aria-label="Upcoming tournament">
+          <button class="close-btn" id="closeCard" aria-label="Close tournament card">
+            <i data-lucide="x"></i>
+          </button>
+          <p class="float-card-label">Upcoming Chess Tournament</p>
+          <ul class="float-card-meta">
+            <li><i data-lucide="calendar-days"></i> Sept 20, 2026</li>
+            <li><i data-lucide="map-pin"></i> AUPP Campus</li>
+            <li><i data-lucide="trophy"></i> Win prizes &amp; gain recognition!</li>
+          </ul>
+          <a href="#events" class="btn btn-outline btn-sm" data-tab="events">
+            Register Now <span aria-hidden="true">&rarr;</span>
+          </a>
+        </aside>
+      </div>
+
+      <div class="hero-bottom">
+        <a href="#events" class="scroll-indicator" data-tab="events">
+          <span class="mouse" aria-hidden="true"><span class="wheel"></span></span>
+          Scroll down
+        </a>
+
+        <ul class="features">
+          <li class="feature">
+            <span class="feature-icon"><i data-lucide="users"></i></span>
+            <span>Friendly<br />Community</span>
+          </li>
+          <li class="feature">
+            <span class="feature-icon"><i data-lucide="trophy"></i></span>
+            <span>Tournaments<br />&amp; Events</span>
+          </li>
+          <li class="feature">
+            <span class="feature-icon"><i data-lucide="graduation-cap"></i></span>
+            <span>Learn<br />&amp; Improve</span>
+          </li>
+        </ul>
+      </div>
+    </section>
+
+    <!-- =================================================================
+         2. EVENTS
+         ================================================================= -->
+    <section class="tab-panel page" id="events" aria-label="Events">
+      <div class="container">
+        <header class="section-head">
+          <h2>Upcoming Events</h2>
+          <p>Join our tournaments, workshops, and special events!</p>
+          <span class="divider" aria-hidden="true">&#9822;</span>
+        </header>
+
+        <div class="event-grid">
+          <article class="card event-card">
+            <!-- SWAP IMAGE: .img-tournament in style.css -->
+            <div class="card-img img-tournament" role="img" aria-label="Chess pieces on a board under dramatic light"></div>
+            <div class="card-body">
+              <h3>Monthly Tournament</h3>
+              <ul class="meta">
+                <li><i data-lucide="calendar-days"></i> Sep 20, 2026</li>
+                <li><i data-lucide="map-pin"></i> AUPP Campus, Main Hall</li>
+              </ul>
+              <p>Rated rounds for every level. Trophies for the top three and the best newcomer.</p>
+              <a href="#contact" class="btn btn-gold btn-block" data-tab="contact">Register Now</a>
+            </div>
+          </article>
+
+          <article class="card event-card">
+            <!-- SWAP IMAGE: .img-workshop in style.css -->
+            <div class="card-img img-workshop" role="img" aria-label="A chessboard set up for a lesson"></div>
+            <div class="card-body">
+              <h3>Beginner Workshop</h3>
+              <ul class="meta">
+                <li><i data-lucide="calendar-days"></i> Oct 5, 2026</li>
+                <li><i data-lucide="map-pin"></i> AUPP Campus, Room 204</li>
+              </ul>
+              <p>Never played before? Learn the rules, basic tactics and your first opening.</p>
+              <a href="#tutorials" class="btn btn-gold btn-block" data-tab="tutorials">Learn More</a>
+            </div>
+          </article>
+
+          <article class="card event-card">
+            <!-- SWAP IMAGE: .img-blitz in style.css -->
+            <div class="card-img img-blitz" role="img" aria-label="A chess clock next to a board"></div>
+            <div class="card-body">
+              <h3>Blitz Night</h3>
+              <ul class="meta">
+                <li><i data-lucide="calendar-days"></i> Oct 18, 2026</li>
+                <li><i data-lucide="map-pin"></i> AUPP Campus, Student Lounge</li>
+              </ul>
+              <p>Five-minute games, fast thinking, good music and snacks. Bring your A-game.</p>
+              <a href="#contact" class="btn btn-gold btn-block" data-tab="contact">Register Now</a>
+            </div>
+          </article>
+        </div>
+      </div>
+    </section>
+
+    <!-- =================================================================
+         3. TUTORIALS
+         ================================================================= -->
+    <section class="tab-panel page" id="tutorials" aria-label="Tutorials">
+      <div class="container">
+        <header class="section-head">
+          <h2>Learn Chess</h2>
+          <p>Hand-picked lessons to take you from your first move to your first win.</p>
+          <span class="divider" aria-hidden="true">&#9822;</span>
+        </header>
+
+        <div class="tutorial-layout">
+          <figure class="video-main card">
+            <div class="video-wrap">
+              <!-- SWAP VIDEO: replace the ID after /embed/ with any YouTube video ID you prefer -->
+              <iframe
+                src="https://www.youtube.com/embed/OCSbzArwB10"
+                title="Beginner Chess Lesson: Rules & Moves"
+                loading="lazy"
+                allow="accelerometer; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+                allowfullscreen></iframe>
+            </div>
+            <figcaption>
+              <i data-lucide="play-circle"></i>
+              Beginner Chess Lesson: Rules &amp; Moves
+            </figcaption>
+          </figure>
+
+          <aside class="tutorial-list card">
+            <h3>More Tutorials</h3>
+            <ul>
+              <!-- SWAP LINKS/THUMBNAILS: set href to your videos; thumbnail images are .thumb-* in style.css -->
+              <li>
+                <a href="https://www.youtube.com/results?search_query=how+to+play+chess+part+2" target="_blank" rel="noopener" class="tutorial-item">
+                  <span class="thumb thumb-1"><i data-lucide="play"></i></span>
+                  <span class="tutorial-info">
+                    <strong>How to Play Chess (Part 2)</strong>
+                    <small>Special moves &middot; 12 min</small>
+                  </span>
+                </a>
+              </li>
+              <li>
+                <a href="https://www.youtube.com/results?search_query=chess+opening+strategies+for+beginners" target="_blank" rel="noopener" class="tutorial-item">
+                  <span class="thumb thumb-2"><i data-lucide="play"></i></span>
+                  <span class="tutorial-info">
+                    <strong>Opening Strategies</strong>
+                    <small>Control the center &middot; 15 min</small>
+                  </span>
+                </a>
+              </li>
+              <li>
+                <a href="https://www.youtube.com/results?search_query=chess+middle+game+tips" target="_blank" rel="noopener" class="tutorial-item">
+                  <span class="thumb thumb-3"><i data-lucide="play"></i></span>
+                  <span class="tutorial-info">
+                    <strong>Middle Game Tips</strong>
+                    <small>Plans &amp; tactics &middot; 18 min</small>
+                  </span>
+                </a>
+              </li>
+              <li>
+                <a href="https://www.youtube.com/results?search_query=chess+endgame+basics" target="_blank" rel="noopener" class="tutorial-item">
+                  <span class="thumb thumb-4"><i data-lucide="play"></i></span>
+                  <span class="tutorial-info">
+                    <strong>Endgame Basics</strong>
+                    <small>Checkmate patterns &middot; 14 min</small>
+                  </span>
+                </a>
+              </li>
+            </ul>
+          </aside>
+        </div>
+      </div>
+    </section>
+
+    <!-- =================================================================
+         4. CHESSBOARD
+         ================================================================= -->
+    <section class="tab-panel page" id="chessboard" aria-label="Chessboard">
+      <div class="container">
+        <header class="section-head">
+          <h2>Play Chess</h2>
+          <p>Move the pieces, test your skills, and enjoy the game!</p>
+          <span class="divider" aria-hidden="true">&#9822;</span>
+        </header>
+
+        <div class="play-layout">
+          <div class="board-frame">
+            <!-- Squares are generated by script.js -->
+            <div class="board" id="board" role="grid" aria-label="Chessboard"></div>
+          </div>
+
+          <aside class="side-panel card">
+            <div class="turn-indicator" id="turnIndicator">
+              <span class="turn-dot" id="turnDot"></span>
+              <div>
+                <small>Your Turn</small>
+                <strong id="turnText">White to move</strong>
+              </div>
+            </div>
+            <p class="game-status" id="gameStatus" aria-live="polite"></p>
+
+            <div class="captured">
+              <div><small>Captured by White</small><span id="capturedWhite"></span></div>
+              <div><small>Captured by Black</small><span id="capturedBlack"></span></div>
+            </div>
+
+            <div class="panel-buttons">
+              <button class="btn btn-gold" id="newGameBtn"><i data-lucide="plus"></i> New Game</button>
+              <button class="btn btn-outline" id="resetBtn"><i data-lucide="rotate-ccw"></i> Reset</button>
+            </div>
+
+            <div class="how-to">
+              <h3>How to Play?</h3>
+              <ol>
+                <li>White moves first, then turns alternate.</li>
+                <li>Click one of your pieces to select it. Its legal moves light up.</li>
+                <li>Click a highlighted square to move there or capture.</li>
+                <li>You can't leave your own king in check. Pawns promote to a queen.</li>
+              </ol>
+              <p class="note">Castling and en passant are not included.</p>
+            </div>
+          </aside>
+        </div>
+      </div>
+    </section>
+
+    <!-- =================================================================
+         5. CONTACT
+         ================================================================= -->
+    <section class="tab-panel page contact" id="contact" aria-label="Contact">
+      <!-- SWAP IMAGE: .contact background in style.css -->
+      <div class="contact-bg" aria-hidden="true"></div>
+
+      <div class="container contact-layout">
+        <div class="contact-info">
+          <h2>Get in Touch</h2>
+          <p>Have questions? Want to join the club? We'd love to hear from you!</p>
+          <ul class="contact-list">
+            <li>
+              <span class="feature-icon"><i data-lucide="mail"></i></span>
+              <a href="mailto:chessclub@aupp.edu">chessclub@aupp.edu</a>
+            </li>
+            <li>
+              <!-- SWAP: replace with your club's real phone number -->
+              <span class="feature-icon"><i data-lucide="phone"></i></span>
+              <a href="tel:+85512345678">+855 12 345 678</a>
+            </li>
+            <li>
+              <span class="feature-icon"><i data-lucide="map-pin"></i></span>
+              <span>AUPP Campus, Phnom Penh, Cambodia</span>
+            </li>
+          </ul>
+        </div>
+
+        <form class="contact-form card" id="contactForm" novalidate>
+          <div class="field">
+            <label for="name">Name <span class="req">*</span></label>
+            <input type="text" id="name" name="name" placeholder="Your full name" required autocomplete="name" />
+            <small class="error" data-for="name"></small>
+          </div>
+          <div class="field">
+            <label for="email">Email <span class="req">*</span></label>
+            <input type="email" id="email" name="email" placeholder="you@example.com" required autocomplete="email" />
+            <small class="error" data-for="email"></small>
+          </div>
+          <div class="field">
+            <label for="message">Message <span class="req">*</span></label>
+            <textarea id="message" name="message" rows="5" placeholder="Tell us a little about yourself…" required></textarea>
+            <small class="error" data-for="message"></small>
+          </div>
+          <button type="submit" class="btn btn-gold btn-block">Submit <span aria-hidden="true">&rarr;</span></button>
+          <p class="form-success" id="formSuccess" role="status" hidden>
+            <i data-lucide="check-circle"></i>
+            Thank you! Your message has been sent. We'll be in touch soon.
+          </p>
+        </form>
+
+        <blockquote class="quote">
+          <span class="quote-mark" aria-hidden="true">&ldquo;</span>
+          <p>Good players inspire themselves. Great players inspire others.</p>
+          <span class="quote-knight" aria-hidden="true">&#9822;</span>
+        </blockquote>
+      </div>
+    </section>
+  </main>
+
+  <footer class="footer">
+    <p>&copy; <span id="year">2026</span> Chess Club &middot; AUPP. Think. Plan. Win.</p>
+  </footer>
+
+</body>
+</html>
