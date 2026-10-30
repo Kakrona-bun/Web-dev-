@@ -1,1 +1,1 @@
-Aupp Chess Club
+#AUPP Chess Club
