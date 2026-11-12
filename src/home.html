@@ -1,41 +1,63 @@
 <!DOCTYPE html>
 <html lang="en">
-    <head>
-        <meta charset="UTF-8">
-        <meta name="viewport" content="width=device-width, initial-scale=1.0">
-        <title>Aupp Chess Club</title>
-        <link rel="stylesheet" href="./home.css">
+	<head>
+		<meta charset="UTF-8">
+		<meta name="viewport" content="width=device-width, initial-scale=1.0">
+		<title>AUPP Chess Club</title>
 
-        <link rel="preconnect" href="https://fonts.googleapis.com" />
-        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
-        <link href="https://fonts.googleapis.com/css2?family=Caveat:wght@500;600&family=Cormorant+Garamond:ital,wght@0,500;0,600;0,700;1,500&family=Inter:wght@300;400;500;600&display=swap" rel="stylesheet" />
-    </head>
-    <body>
-        <header class="navbar">
-            <nav class="nav-links">
-                <a href="./home.html" class="nav-link">Home</a>
-                <a href="./events.html" class="nav-link">Event</a>
-                <a href="./tutorials.html" class="nav-link">Tutorials</a>
-                <a href="./chessboard.html" class="nav-link">Chessboard</a>
-                <a href="./contacts.html" class="nav-link">Contact</a>
-            </nav>
-        </header>
+		<link rel="preconnect" href="https://fonts.googleapis.com">
+		<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+		<link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,700;1,400&family=Inter:wght@400;500;600&display=swap" rel="stylesheet">
 
-        <main>
-            <section class="tab-panel">
-                <div class="hero-bg">
-                    <div class="hero-inner">
-                        <div class="hero-content">
-                            <p class="hero-pre">Welcome to the</p>
-                            <h1 class="hero-title">Chess Club</h1>
-                            <p class="hero-desc">A community for all chess lovers. We have from beginners to advanced players. Learn, play, and grow together.</p>
-                        </div>
-                    </div>
-                </div>
-            </section>
-        </main>
-        <footer class="footer">
+		<link rel="stylesheet" href="./home.css">
+	</head>
+
+	<body>
+		<header>
+			<!-- the chess logo in the header (the &#9822 is the chess symbols in html code)-->
+			<a href="./home.html" class="logo">
+				<span class="logo-icon">&#9822;</span>
+				<span>
+					<span class="logo-name">CHESS CLUB</span>
+					<span class="logo-tagline">THINK. PLAN. WIN.</span>
+				</span>
+			</a>
+
+			<!-- Navigation -->
+			<nav class="nav-bars">
+				<a href="./home.html" class="nav-bar active">Home</a>
+				<a href="./events.html" class="nav-bar">Events</a>
+				<a href="./tutorials.html" class="nav-bar">Tutorials</a>
+				<a href="./chessboard.html" class="nav-bar">Chessboard</a>
+				<a href="./contacts.html" class="nav-bar">Contact</a>
+			</nav>
+
+			<!-- Empty space so the nav stays centered -->
+			<div class="header-space"></div>
+		</header>
+
+		<main>
+			<section id="home" class="home-bg">
+				<div class="home-content">
+					<p class="home-pre">Welcome to the</p>
+					<h1 class="home-title">Chess<br>Club</h1>
+					<p class="home-desc">A community for all chess lovers. We have from beginners to advanced players. Learn, play, and grow together.</p>
+					<a href="./contact.html" class="btn-gold">Join Our Club &rarr;</a>
+				</div>
+
+				<!-- Tournament card -->
+				<div class="tournament-card">
+					<h2>Upcoming Chess Tournament</h2>
+					<p>Sept 20, 2026</p>
+					<p>AUPP Campus</p>
+					<p>Win prizes &amp; gain recognition!</p>
+					<a href="./events.html" class="btn-outline">Register Now &rarr;</a>
+				</div>
+			</section>
+		</main>
+
+		<footer class="footer">
             <p>&copy; <span id="year">2026</span> Chess Club AUPP. Think. Plan. Win.</p>
         </footer>
-    </body>
+	</body>
 </html>
