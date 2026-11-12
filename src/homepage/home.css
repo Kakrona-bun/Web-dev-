@@ -102,7 +102,7 @@ header {
     gap: 40px;
 
     /* dark gradient on top, picture underneath */
-    background-image: linear-gradient(90deg, rgba(11, 13, 16, 0.96), rgba(11, 13, 16, 0.75), rgba(11, 13, 16, 0.35)), url('./assets/hero-bg.avif');
+    background-image: linear-gradient(90deg, rgba(11, 13, 16, 0.96), rgba(11, 13, 16, 0.75), rgba(11, 13, 16, 0.35)), url('../assets/hero-bg.avif');
     background-size: cover;
     background-position: center;
     background-repeat: no-repeat;
