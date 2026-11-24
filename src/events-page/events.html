@@ -1,38 +1,66 @@
 <!DOCTYPE html>
 <html lang="en">
-    <head>
-        <meta charset="UTF-8">
-        <meta name="viewport" content="width=device-width, initial-scale=1.0">
-        <title>AUPP Chess Club</title>
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Events | AUPP Chess Club</title>
+  <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@600;700&family=Inter:wght@400;500&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="events.css">
+</head>
+<body>
 
-        <link rel="preconnect" href="https://fonts.googleapis.com">
-		<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-		<link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,700;1,400&family=Inter:wght@400;500;600&display=swap" rel="stylesheet">
-        
-        <link rel="stylesheet" href="./events.css">
-    </head>
-    <body>
-        <header>
-			<!-- the chess logo in the header (the &#9822 is the chess symbols in html code)-->
-			<a href="./home.html" class="logo">
-				<span class="logo-icon">&#9822;</span>
-				<span>
-					<span class="logo-name">CHESS CLUB</span>
-					<span class="logo-tagline">THINK. PLAN. WIN.</span>
-				</span>
-			</a>
+  <!-- Navbar (copy the one from home.html if yours is different) -->
+  <header class="navbar">
+    <div class="logo">
+      <span class="logo-icon">&#9822;</span>
+      <div>
+        <h2>CHESS CLUB</h2>
+        <small>THINK. PLAN. WIN.</small>
+      </div>
+    </div>
+    <nav>
+      <a href="../homepage/home.html">Home</a>
+      <a href="events.html" class="active">Events</a>
+      <a href="../tutorials-page/tutorials.html">Tutorials</a>
+      <a href="../chessboard-page/chessboard.html">Chessboard</a>
+      <a href="../contact-page/contact.html">Contact</a>
+    </nav>
+  </header>
 
-			<!-- Navigation -->
-			<nav class="nav-bars">
-				<a href="../homepage/home.html" class="nav-bar">Home</a>
-				<a href="../events-page/events.html" class="nav-bar active">Events</a>
-				<a href="../tutorials-page/tutorials.html" class="nav-bar">Tutorials</a>
-				<a href="../chessboard-page/chessboard.html" class="nav-bar">Chessboard</a>
-				<a href="../contacts-page/contacts.html" class="nav-bar">Contact</a>
-			</nav>
+  <!-- Title -->
+  <section class="title">
+    <h1>Events</h1>
+    <p>Tournaments, workshops and casual nights for every level.</p>
+  </section>
 
-			<!-- Empty space so the nav stays centered -->
-			<div class="header-space"></div>
-		</header>
-    </body>
+  <!-- Event cards -->
+  <section class="events">
+
+    <div class="card">
+      <p class="date">Dec 3, 2026</p>
+      <h3>Casual Play Night</h3>
+      <p>AUPP Student Lounge, 6:00 PM</p>
+      <p>Bring a friend, grab a board and play. All levels welcome.</p>
+      <a class="button" href="../contact-page/contact.html">Register</a>
+    </div>
+
+    <div class="card">
+      <p class="date">Dec 10, 2026</p>
+      <h3>Opening Basics Workshop</h3>
+      <p>AUPP Campus, 5:30 PM</p>
+      <p>Learn how to start a game and develop your pieces.</p>
+      <a class="button" href="../contact-page/contact.html">Register</a>
+    </div>
+
+    <div class="card">
+      <p class="date">Dec 19, 2026</p>
+      <h3>Winter Rapid Tournament</h3>
+      <p>AUPP Campus, 9:00 AM</p>
+      <p>Win prizes &amp; gain recognition!</p>
+      <a class="button" href="../contact-page/contact.html">Register</a>
+    </div>
+
+  </section>
+
+</body>
 </html>
