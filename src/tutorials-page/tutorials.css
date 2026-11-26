@@ -1,1 +1,59 @@
 @import url('../homepage/home.css');
+
+.videos {
+  background-color: #0b0d10;
+  padding-top: 68px; /* space for the fixed header */
+  min-height: 100vh;
+}
+
+/* one block per category (heading + grid) */
+.video-section {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 3rem 1.5rem;
+  border-top: 1px solid rgba(212, 175, 106, 0.2);
+}
+
+.video-section:first-child {
+  border-top: none;
+}
+
+.video-section-title {
+  margin-bottom: 1.5rem;
+  color: #d4af6a;
+  font-size: clamp(1.8rem, 4vw, 2.5rem);
+  letter-spacing: 1px;
+}
+
+/* the video grid */
+.video-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(min(100%, 300px), 1fr));
+  gap: 2rem 1.5rem;
+}
+
+.video-container {
+  display: flex;
+  flex-direction: column;
+}
+
+.thumbnail {
+  display: flex;
+}
+
+.thumbnail iframe {
+  width: 100%;
+  aspect-ratio: 16 / 9;
+  height: auto;
+  border: 0;
+  border-radius: 8px;
+  background-color: #19191c; /* shown while the video loads */
+}
+
+.video-title {
+  margin-top: 0.75rem;
+  font-size: 1rem;
+  font-weight: 500;
+  line-height: 1.4;
+  color: #f2ede4;
+}
