@@ -1,1 +1,185 @@
 @import url('../homepage/home.css');
+.contact {
+    position:relative;
+    width: 100%;
+    background: #0b0d10;
+    margin: 0 auto;
+    padding: 95px 60px;
+    max-width: 1440px;
+    display: grid;
+    grid-template-columns: repeat(2,minmax(0, 1fr));
+    align-items: start;
+    column-gap: 60px;
+    row-gap: 50px;
+
+}
+.contact-bg{
+    position: relative;
+    width: 100%;
+    height: 260px;
+    overflow: hidden;
+    background: #0b0d10;
+}
+.contact-bg img{
+    display:block;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    object-position: center;
+}
+
+.contact-info{
+    grid-column: 1;
+    width: 100%;
+    
+}
+.contact-info h2{
+    font-family:'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+    font-size: medium;
+    font-weight: 700;
+    line-height: 1.1;
+    margin-bottom: 20px;
+    color: whitesmoke;
+}
+.contact-info h2::firstline{
+    color:gold;
+}
+.contact-info p{
+    color: gainsboro;
+    font-size: 16px;
+    line-height: 1.9;
+    margin-bottom: 36px;
+}
+.leadership-section{
+    width: 100px;
+    margin-top: 35px;
+}
+.leadership-section h3{
+    font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+    font-size: 30px;
+    color: gold;
+    margin-bottom: 8px;
+}
+.leadership p{
+    color:grey;
+    font-size: 14px;
+    margin-bottom: 20px;
+}
+.table-wrapper{
+    width: 100%;
+    overflow-x: auto;
+    background: black;
+    border: 1px solid #343438;
+    border-radius: 12px;
+}
+.table{
+    width: 100%;
+    border-collapse: collapse;
+    border-spacing: 0;
+    text-align: left;
+}
+.table th{
+    padding: 15px 12px;
+    color: gold;
+    font-size: 12px;
+    font-weight: 600;
+    text-align: left;
+    text-transform: uppercase;
+    letter-spacing: 0.5px;
+    white-space: nowrap;
+}
+.table td{
+    padding: 16px 12px;
+    color: white;
+    font-size: 13px;
+    vertical-align: middle;
+    border-top: 1px solid #343438;
+}
+.table tr:hover{
+    background: darkblue;
+}
+.leader-photo{
+    display: block;
+    width: 65px;
+    height: 65px;
+    object-fit: cover;
+    border-radius: 50%;
+    border: 2px solid #d6b478;
+    background: #2e2d2d;
+}
+.table a{
+    text-decoration: none;
+    color:#d6b478;
+}
+.table a:hover{
+    color:blue;
+    text-decoration: underline;
+}
+.contact-card{
+    width:100%;
+    max-width: 510px;
+    justify-self: end;
+    background: rgb(58, 56, 56);
+    border: 1px solid #343438;
+    border-radius: 16px;
+    padding: 22px;
+}
+.contact-card fieldset{
+    border: none;
+    margin-bottom: 24px;
+}
+.contact-card input[type="text"],.contact-card input[type="email"],.contact-card textarea{
+    width: 100%;
+    padding: 15px 16px;
+    background: rgb(245, 243, 243) ;
+    color: rgb(2, 2, 2);
+    border: 1px solid black;
+    border-radius: 8px;
+    font-family:'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+    font-size: 14px;
+    outline: none;
+}
+.contact-card input::placeholder, .contact-card textarea::placeholder{
+    color: #85858e;
+}
+.contact-card input[type="radio"]{
+    accent-color: gold;
+    cursor: pointer;
+    width: 16px;
+    height: 16px;
+    vertical-align: middle;
+    margin-right: 5px;
+}
+.btn {
+    width: 100%;
+    border: none;
+    border-radius: 8px;
+    padding: 16px 25px;
+    background: gold;
+    color: #f4f4f4;
+    font-family:'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+    font-size: 14px;
+    font-weight: 600;
+    cursor: pointer;
+}
+.btn:hover {
+    background: gold;
+    cursor: pointer;
+}
+
+blockquote {
+    grid-column: 1 / -1;
+    width: 100%;
+    max-width: 850px;
+    justify-self: center;
+    text-align: center;
+    padding: 30px 40px;
+    border-top: 1px solid #f8ab30;
+}
+
+blockquote p {
+    color: #f8ab30;
+    font-family:'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+    font-size: 24px;
+    font-style: italic;
+}
