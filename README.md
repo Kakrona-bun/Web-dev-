@@ -46,13 +46,13 @@ Web-dev-/
     ├── contacts-page/
     │   ├── contacts.html
     │   └── contacts.css
+    |   └──scripts.js
     ├── chessboard-page/
     │   ├── chessboard.html
     │   ├── chessboard.css
     │   └── src/               # Required React files
     │       ├── App.jsx
     │       └── main.jsx
-    ├── scripts.js
     ├── package.json
     ├── package-lock.json
     └── vite.config.js
