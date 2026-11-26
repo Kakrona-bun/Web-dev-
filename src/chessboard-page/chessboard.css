@@ -1,1 +1,231 @@
 @import url('../homepage/home.css');
+.page {
+    max-width: 1000px;
+    margin: auto;
+    padding: 70px 28px 65px;
+}
+
+/* Introduction */
+
+.eyebrow {
+    color: #d6b478;
+    font-size: 11px;
+    letter-spacing: 3px;
+    font-weight: bold;
+}
+
+.intro h1 {
+    font-family: 'Cormorant Garamond', Georgia, serif;
+    font-size: 40px;
+    font-weight: bold;
+    margin: 14px 0 10px;
+}
+
+.intro h1 em {
+    color: #d6b478;
+}
+
+.intro p {
+    color: #aaa9ac;
+    margin-bottom: 38px;
+    font-size: 14px;
+}
+
+/* Game layout */
+
+.game-layout {
+    display: flex;
+    justify-content: center;
+    align-items: flex-start;
+    gap: 35px;
+}
+
+/* Chessboard */
+
+.board-column {
+    max-width: 500px;
+    width: 100%;
+    margin: 0;
+}
+
+.board-frame {
+    background-color: #d6b478;
+    padding: 5px;
+    border-radius: 10px;
+}
+
+/* Player information */
+
+.player-label {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    padding: 12px 0;
+    color: white;
+    font-size: 13px;
+    font-weight: bold;
+}
+
+.piece-dot {
+    width: 18px;
+    height: 18px;
+    border-radius: 50%;
+    border: 2px solid #b8a586;
+}
+
+.black-dot {
+    background-color: #26282b;
+}
+
+.white-dot {
+    background-color: #f6eee3;
+}
+
+/* Game room */
+
+.sidebar {
+    width: 350px;
+    max-width: 100%;
+    background-color: #1b1c1e;
+    border: 1px solid #343438;
+    border-radius: 14px;
+    padding: 25px;
+}
+
+.sidebar-title {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    color: #d6b478;
+    font-size: 12px;
+    letter-spacing: 2px;
+    font-weight: bold;
+    border-bottom: 1px solid #39393b;
+    padding-bottom: 18px;
+    margin-bottom: 22px;
+}
+
+.sidebar-title span {
+    font-size: 25px;
+}
+
+/* Game mode */
+
+.field-label {
+    display: block;
+    color: white;
+    font-size: 12px;
+    margin-bottom: 8px;
+}
+
+.sidebar select {
+    width: 100%;
+    background-color: #292a2d;
+    color: white;
+    border: 1px solid #49484b;
+    padding: 12px;
+    border-radius: 6px;
+    font-family: Arial, sans-serif;
+    font-size: 13px;
+}
+
+/* Game status */
+
+.status {
+    background-color: #252321;
+    border-left: 3px solid #d6b478;
+    color: #efd5a4;
+    font-weight: bold;
+    font-size: 13px;
+    margin: 22px 0;
+    padding: 15px;
+    min-height: 48px;
+}
+
+/* Game buttons */
+
+.action-grid {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 10px;
+}
+
+.sidebar button {
+    background-color: #d6b478;
+    color: black;
+    border: 1px solid #655439;
+    border-radius: 6px;
+    padding: 13px 8px;
+    cursor: pointer;
+    font-family: Arial, sans-serif;
+    font-size: 12px;
+    font-weight: bold;
+}
+
+.sidebar button:hover {
+    background-color: #f4d69e;
+}
+
+.sidebar button:disabled {
+    background-color: #d6b478;
+    opacity: 0.4;
+    cursor: not-allowed;
+}
+
+/* Move history heading */
+
+.history-heading {
+    display: flex;
+    justify-content: space-between;
+    gap: 8px;
+    color: #d6b478;
+    font-size: 11px;
+    font-weight: bold;
+    letter-spacing: 1px;
+    margin-top: 30px;
+    margin-bottom: 12px;
+}
+
+.history-heading span {
+    color: #8a8888;
+    font-size: 10px;
+}
+
+/* Move history box */
+
+.history {
+    background-color: #121416;
+    border: 1px solid #373739;
+    border-radius: 6px;
+    max-height: 240px;
+    min-height: 110px;
+    overflow-y: auto;
+    padding: 10px;
+}
+
+/* Chess moves */
+
+.move-row {
+    display: grid;
+    grid-template-columns: 36px 1fr 1fr;
+    gap: 10px;
+    padding: 7px 10px;
+    font-size: 13px;
+}
+
+.move-row:nth-child(even) {
+    background-color: #222325;
+}
+
+.move-number {
+    color: #939292;
+}
+
+/* Empty move history */
+
+.empty {
+    color: #939292;
+    text-align: center;
+    font-size: 12px;
+    padding: 22px 0;
+}
