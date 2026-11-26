@@ -202,13 +202,33 @@ header {
 
 /* small screens */
 @media (max-width: 900px) {
-    .nav-bars {
+    /* header: logo on top, nav links underneath */
+    header {
+        height: auto;
+        flex-direction: column;
+        gap: 10px;
+        padding: 12px 16px;
+    }
+
+    .logo {
+        width: auto;
+    }
+
+    .header-space {
         display: none;
     }
 
+    .nav-bars {
+        flex-wrap: wrap;
+        justify-content: center;
+        gap: 18px;
+    }
+
+    /* hero: stack text and card, leave room for the taller header */
     .home-bg {
         flex-direction: column;
-        padding: 100px 24px 40px;
+        align-items: flex-start;
+        padding: 150px 24px 40px;
     }
 
     .home-title {
@@ -217,5 +237,19 @@ header {
 
     .tournament-card {
         width: 100%;
+    }
+}
+
+@media (max-width: 480px) {
+    .nav-bars {
+        gap: 12px;
+    }
+
+    .nav-bar {
+        font-size: 0.85rem;
+    }
+
+    .home-title {
+        font-size: 4rem;
     }
 }
