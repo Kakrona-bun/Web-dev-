@@ -78,7 +78,7 @@
 						</table>	
 					</div>
 				</div>
-				<form class="contact-card" target="_blank">
+				<form class="contact-card">
 					<fieldset>
 						<label for="name">Name</label>
 						<input type="text" id="name"placeholder="Your full name" required minlength="2" autocomplete="name"/>
@@ -89,11 +89,11 @@
 					</fieldset>
 					<fieldset>
 						<label for="level">level: </label>
-						<input type="radio" name="Beginner" id="beginner">
+						<input type="radio" name="level" id="level" value="beginner" required>
 						<label for="Beginner">Beginner</label>
-						<input type="radio" name="Intermediate" id="intermediate">
+						<input type="radio" name="level" id="level" value="intermediate" required>
 						<label for="intermediate">Intermediate</label>
-						<input type="radio" name="advanced" id="advanced">
+						<input type="radio" name="level" id="level" value="advanced" required>
 						<label for="advanced">Advanced</label>
 					</fieldset>
 					<fieldset>
@@ -102,11 +102,13 @@
 					</fieldset>
 					<button type="submit" class="btn" id="button">Submit</button>
 				</form>
+				<p id="submit-msg"></p>
 			</section>
 				<blockquote>
 					<p>Good players play with other. But great player, will sit at the chessboard and play with yourself, it's amazing-Magnus Carlsen</p>
 				</blockquote>
 			</section>
 		</main>
+		<script src="../scripts.js"></script>
     </body>
 </html>
